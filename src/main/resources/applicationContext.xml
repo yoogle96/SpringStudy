@@ -2,22 +2,29 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:p="http://www.springframework.org/schema/p"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-4.2.xsd">
 
-    <bean id="collectionBean" class="com.springbook.ioc.injection.CollectionBean">
-        <property name="addressList">
-            <map>
-                <entry>
-                    <key><value>고길동</value></key>
-                    <value>서울시 강남두 역삼동</value>
-                </entry>
-                <entry>
-                    <key><value>마이콜</value></key>
-                    <value>서울시 강서구 화곡동</value>
-                </entry>
-            </map>
-        </property>
-    </bean>
+    <context:component-scan base-package="polymorphism"/>
+    <bean class="polymorphism.SonySpeaker"></bean>
+
+    <!--<bean id="collectionBean" class="com.springbook.ioc.injection.CollectionBean">-->
+        <!--<property name="addressList">-->
+            <!--<map>-->
+                <!--<entry>-->
+                    <!--<key><value>고길동</value></key>-->
+                    <!--<value>서울시 강남두 역삼동</value>-->
+                <!--</entry>-->
+                <!--<entry>-->
+                    <!--<key><value>마이콜</value></key>-->
+                    <!--<value>서울시 강서구 화곡동</value>-->
+                <!--</entry>-->
+            <!--</map>-->
+        <!--</property>-->
+    <!--</bean>-->
 
     <!--<bean id="tv" class="polymorphism.SamsungTV" p:speaker-ref="sony" p:price="2700000" init-method="initMethod" destroy-method="destroyMethod" scope="prototype">-->
     <!--</bean>-->
