@@ -22,12 +22,21 @@
     <aop:config>
         <aop:pointcut id="allPointcut" expression="execution(* com.springbook.biz..*Impl.*(..))"/>
         <aop:pointcut id="getPointcut" expression="execution(* com.springbook.biz..*Impl.get*(..))"/>
+
+        <aop:aspect ref="afterThrowing">
+            <aop:after-throwing pointcut-ref="allPointcut" method="exceptionLog" throwing="exceptionObj"/>
+        </aop:aspect>
+
+
+        <!--<aop:aspect ref="before">-->
+            <!--<aop:before pointcut-ref="allPointcut" method="beforeLog"/>-->
+        <!--</aop:aspect>-->
         <!--<aop:aspect ref="afterThrowing">-->
             <!--<aop:after pointcut-ref="allPointcut" method="exceptionLog"/>-->
         <!--</aop:aspect>-->
-        <aop:aspect ref="around">
-            <aop:around pointcut-ref="allPointcut" method="aroundLog"/>
-        </aop:aspect>
+        <!--<aop:aspect ref="around">-->
+            <!--<aop:around pointcut-ref="allPointcut" method="aroundLog"/>-->
+        <!--</aop:aspect>-->
     </aop:config>
     <!--<bean id="userService" class="com.springbook.biz.user.impl.UserServiceImpl">-->
         <!--<property name="userDAO" ref="userDAO"/>-->
