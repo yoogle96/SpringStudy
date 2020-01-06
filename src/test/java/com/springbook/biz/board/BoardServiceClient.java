@@ -18,8 +18,9 @@ public class BoardServiceClient {
         vo.setContent("임시 내용...........");
         boardService.insertBoard(vo);
 
-        List<BoardVO> boardVOList = boardService.getBoardList(vo);
+        List<BoardVO> boardVOList = boardService.getBoardList();
         for(BoardVO board : boardVOList){
+//            boardService.deleteBoard(board);
             System.out.println("--->" + board.toString());
         }
 
