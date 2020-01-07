@@ -8,9 +8,9 @@ import polymorphism.SamsungTV;
 public class SpringStudyApplication {
 
     public static void main(String[] args) {
-        SamsungTV samsungTV = new SamsungTV();
-        samsungTV.powerOff();
-//        SpringApplication.run(SpringStudyApplication.class, args);
+//        SamsungTV samsungTV = new SamsungTV();
+//        samsungTV.powerOff();
+        SpringApplication.run(SpringStudyApplication.class, args);
     }
 
 }

@@ -80,7 +80,7 @@ public class BoardDAO {
                 board = new BoardVO();
                 board.setSeq(rs.getInt("SEQ"));
                 board.setTitle(rs.getString("TITLE"));
-                board.setWriter(rs.getString("WIRTER"));
+                board.setWriter(rs.getString("WRITER"));
                 board.setContent(rs.getString("CONTENT"));
                 board.setRegDate(rs.getDate("REGDATE"));
                 board.setCnt(rs.getInt("CNT"));
