@@ -39,7 +39,7 @@
 				<th bgcolor="orange" width="150"><spring:message code="message.board.list.table.head.regDate"/></th>
 				<th bgcolor="orange" width="100"><spring:message code="message.board.list.table.head.cnt"/></th>
 			</tr>
-			<c:forEach items="${boardList }" var="board">
+			<c:forEach items="${boardList}" var="board">
 				<tr>
 					<td>${board.seq }</td>
 					<td align="left"><a href="getBoard.do?seq=${board.seq }">
