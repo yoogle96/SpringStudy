@@ -2,7 +2,6 @@ package com.springbook.biz.board.impl;
 
 import com.springbook.biz.board.BoardVO;
 import com.springbook.biz.common.JDBCUtil;
-import com.springbook.biz.util.SqlSessionFactoryBean;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
@@ -28,7 +27,6 @@ public class BoardDAO {
     private final String BOARD_LIST_C = "select * from board where content like '%'||?||'%' order by seq desc";
 
     public BoardDAO() {
-        mybatis = SqlSessionFactoryBean.getSqlSessionInstance();
     }
 
     public void insertBoard(BoardVO vo){

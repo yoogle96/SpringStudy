@@ -1,6 +1,7 @@
 package com.springbook.biz.board;
 
-import com.springbook.biz.board.impl.BoardDAO;
+//import com.springbook.biz.board.impl.BoardDAO;
+import com.springbook.biz.board.impl.BoardDAOMybatis;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
@@ -9,7 +10,7 @@ import java.util.List;
 public class BoardServiceClient {
 
     public static void main(String[] args){
-        BoardDAO boardDao = new BoardDAO();
+        BoardDAOMybatis boardDao = new BoardDAOMybatis();
 
         BoardVO vo = new BoardVO();
         vo.setTitle("myBatis 제목");
